@@ -1,8 +1,8 @@
 "use strict"
 
 let url = "https://fakestoreapi.com/products";
-
 async function mostrarData(){
+try {
     let res = await fetch(url)
     let data = await res.json()
     console.log(data);
@@ -25,6 +25,11 @@ async function mostrarData(){
         
     });
     
+}  
+catch (error) {
+  console.log("Ocurrio un erro");
+  
+  
 }
-
+}
 mostrarData()
